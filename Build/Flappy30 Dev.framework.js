@@ -1179,29 +1179,29 @@ var tempDouble;
 var tempI64;
 
 var ASM_CONSTS = {
- 2416932: function() {
+ 2416900: function() {
   return Module.webglContextAttributes.premultipliedAlpha;
  },
- 2416993: function() {
+ 2416961: function() {
   return Module.webglContextAttributes.preserveDrawingBuffer;
  },
- 2417057: function() {
+ 2417025: function() {
   return Module.webglContextAttributes.powerPreference;
  },
- 2417115: function() {
+ 2417083: function() {
   Module["emscripten_get_now_backup"] = performance.now;
  },
- 2417170: function($0) {
+ 2417138: function($0) {
   performance.now = function() {
    return $0;
   };
  },
- 2417218: function($0) {
+ 2417186: function($0) {
   performance.now = function() {
    return $0;
   };
  },
- 2417266: function() {
+ 2417234: function() {
   performance.now = Module["emscripten_get_now_backup"];
  }
 };
@@ -1366,6 +1366,18 @@ function _ExitFullscreen() {
  if (objFullScreen) {
   if (document.exitFullscreen) document.exitFullscreen(); else if (document.msExitFullscreen) document.msExitFullscreen(); else if (document.mozCancelFullScreen) document.mozCancelFullScreen(); else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
  }
+}
+
+function _GetSessionStorage(key) {
+ var token1 = sessionStorage.getItem(UTF8ToString(key));
+ var len = lengthBytesUTF8(token1) + 1;
+ var buffer = _malloc(len);
+ stringToUTF8(token1, buffer, len);
+ return buffer;
+}
+
+function _GetSessionStorageKey(index) {
+ return sessionStorage.key(index);
 }
 
 function _GetSessionStorageLength() {
@@ -14449,6 +14461,8 @@ var asmLibraryArg = {
  "CopyToClipboardAndShare": _CopyToClipboardAndShare,
  "DestroyBannerAd": _DestroyBannerAd,
  "ExitFullscreen": _ExitFullscreen,
+ "GetSessionStorage": _GetSessionStorage,
+ "GetSessionStorageKey": _GetSessionStorageKey,
  "GetSessionStorageLength": _GetSessionStorageLength,
  "InitSDK": _InitSDK,
  "IsFullscreen": _IsFullscreen,
