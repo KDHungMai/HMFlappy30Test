@@ -1179,29 +1179,29 @@ var tempDouble;
 var tempI64;
 
 var ASM_CONSTS = {
- 2416660: function() {
+ 2416900: function() {
   return Module.webglContextAttributes.premultipliedAlpha;
  },
- 2416721: function() {
+ 2416961: function() {
   return Module.webglContextAttributes.preserveDrawingBuffer;
  },
- 2416785: function() {
+ 2417025: function() {
   return Module.webglContextAttributes.powerPreference;
  },
- 2416843: function() {
+ 2417083: function() {
   Module["emscripten_get_now_backup"] = performance.now;
  },
- 2416898: function($0) {
+ 2417138: function($0) {
   performance.now = function() {
    return $0;
   };
  },
- 2416946: function($0) {
+ 2417186: function($0) {
   performance.now = function() {
    return $0;
   };
  },
- 2416994: function() {
+ 2417234: function() {
   performance.now = Module["emscripten_get_now_backup"];
  }
 };
@@ -1369,7 +1369,15 @@ function _ExitFullscreen() {
 }
 
 function _GetSessionStorage(key) {
- return window.sessionStorage.getItem(key);
+ return sessionStorage.getItem(key);
+}
+
+function _GetSessionStorageKey(index) {
+ return sessionStorage.key(index);
+}
+
+function _GetSessionStorageLength() {
+ return sessionStorage.length;
 }
 
 function _InitSDK() {}
@@ -14450,6 +14458,8 @@ var asmLibraryArg = {
  "DestroyBannerAd": _DestroyBannerAd,
  "ExitFullscreen": _ExitFullscreen,
  "GetSessionStorage": _GetSessionStorage,
+ "GetSessionStorageKey": _GetSessionStorageKey,
+ "GetSessionStorageLength": _GetSessionStorageLength,
  "InitSDK": _InitSDK,
  "IsFullscreen": _IsFullscreen,
  "IsRewardedAdReady": _IsRewardedAdReady,
