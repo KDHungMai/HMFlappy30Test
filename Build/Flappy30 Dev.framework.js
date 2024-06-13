@@ -1368,6 +1368,10 @@ function _ExitFullscreen() {
  }
 }
 
+function _GetSessionStorage(key) {
+ return window.sessionStorage.getItem(key);
+}
+
 function _InitSDK() {}
 
 function _IsFullscreen() {
@@ -14445,6 +14449,7 @@ var asmLibraryArg = {
  "CopyToClipboardAndShare": _CopyToClipboardAndShare,
  "DestroyBannerAd": _DestroyBannerAd,
  "ExitFullscreen": _ExitFullscreen,
+ "GetSessionStorage": _GetSessionStorage,
  "InitSDK": _InitSDK,
  "IsFullscreen": _IsFullscreen,
  "IsRewardedAdReady": _IsRewardedAdReady,
