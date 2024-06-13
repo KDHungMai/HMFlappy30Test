@@ -1369,11 +1369,17 @@ function _ExitFullscreen() {
 }
 
 function _GetSessionStorage(key) {
- var token1 = sessionStorage.getItem(UTF8ToString(key));
- var len = lengthBytesUTF8(token1) + 1;
- var buffer = _malloc(len);
- stringToUTF8(token1, buffer, len);
- return buffer;
+ console.log("parse key: " + key);
+ var strKey = UTF8ToString(key);
+ console.log("parse strKey: " + strKey);
+ if (strKey != null) {
+  var token1 = sessionStorage.getItem(strKey);
+  var len = lengthBytesUTF8(token1) + 1;
+  var buffer = _malloc(len);
+  stringToUTF8(token1, buffer, len);
+  return buffer;
+ }
+ return "";
 }
 
 function _GetSessionStorageKey(index) {
