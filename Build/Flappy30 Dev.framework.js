@@ -1,7 +1,22 @@
 function unityFramework(Module) {
 var Module = typeof Module !== "undefined" ? Module : {};
 
+Module.ToCSharpStr = function (token1)
+{
+    if (token1 != null)
+    {
+        var len = lengthBytesUTF8(token1) + 1;
+        var buffer = _malloc(len);
+        stringToUTF8(token1, buffer, len);
+        return buffer;
+    }
+    return null;
+}
 
+Module.ToStrFromCSharp = function (str)
+{
+    return UTF8ToString(str);
+}
 
 
 function Pointer_stringify(s, len) {
@@ -1369,21 +1384,18 @@ function _ExitFullscreen() {
 }
 
 function _GetSessionStorage(key) {
- console.log("parse key: " + key);
- var strKey = UTF8ToString(key);
- console.log("parse strKey: " + strKey);
- if (strKey != null) {
-  var token1 = sessionStorage.getItem(strKey);
-  var len = lengthBytesUTF8(token1) + 1;
-  var buffer = _malloc(len);
-  stringToUTF8(token1, buffer, len);
-  return buffer;
+ if (key != null) {
+  var strKey = Module.ToStrFromCSharp(key);
+  if (strKey != null) {
+   var value = sessionStorage.getItem(strKey);
+   return Module.ToCSharpStr(decodeURIComponent(value));
+  }
  }
- return "";
+ return null;
 }
 
 function _GetSessionStorageKey(index) {
- return sessionStorage.key(index);
+ return Module.ToCSharpStr(sessionStorage.key(index));
 }
 
 function _GetSessionStorageLength() {
