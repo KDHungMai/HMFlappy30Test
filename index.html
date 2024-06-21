@@ -1,75 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <script>
-      var _antgamesSDK = _antgamesSDK || {};
-      _antgamesSDK.sid = "4e682dcd-1229-4d78-a058-8bc447e33de6";
-  
-      _antgamesSDK.bannerConfig = _antgamesSDK.bannerConfig || {};
-      _antgamesSDK.bannerSizeConfig = _antgamesSDK.bannerSizeConfig || {};
-      _antgamesSDK.rewardedConfig = _antgamesSDK.rewardedConfig || {};
-      _antgamesSDK.ingameConfig = _antgamesSDK.ingameConfig || {};
-  
-      _antgamesSDK.bannerSizeConfig.getId = function (size) {
-          return this[size];
-      };
-  
-  _antgamesSDK.tagAutoReward = "";
-  
-  _antgamesSDK.ingameConfig["04D2-1550-1ED6-183A"] = {
-      tagId: "pw_20583",
-      customKey: ""
-    };
-  
-  
-  _antgamesSDK.rewardedConfig["04D2-1550-1ED5-183B"] = {
-     tagId: "pw_20583",
-     customKey: "2047_04D2-1550-1ED5-183B"
-  };
-   
-  _antgamesSDK.tagAutoReward = "04D2-1550-1ED5-183B";
-  
-  
-  
-  _antgamesSDK.bannerConfig ["04D2-1550-1ED4-183C"] = {
-      tagId: "pw_19844",
-      customKey: "2047_04D2-1550-1ED4-183C"
-    };
-  _antgamesSDK.bannerSizeConfig['300x250'] = "04D2-1550-1ED4-183C";
-  
-  
-  _antgamesSDK.bannerConfig ["04D2-1550-1ED4-183D"] = {
-      tagId: "pw_19846",
-      customKey: "2047_04D2-1550-1ED4-183D"
-    };
-  _antgamesSDK.bannerSizeConfig['728x90'] = "04D2-1550-1ED4-183D";
-  
-  
-  _antgamesSDK.bannerConfig ["04D2-1550-1ED4-183E"] = {
-      tagId: "pw_19849",
-      customKey: "2047_04D2-1550-1ED4-183E"
-    };
-  _antgamesSDK.bannerSizeConfig['160x600'] = "04D2-1550-1ED4-183E";
-  
-  
-  _antgamesSDK.bannerConfig ["04D2-1550-1ED4-183F"] = {
-      tagId: "pw_19847",
-      customKey: "2047_04D2-1550-1ED4-183F"
-    };
-  _antgamesSDK.bannerSizeConfig['320x100'] = "04D2-1550-1ED4-183F";
-  
-  
-  
-  
-  var powerTag = powerTag || {};
-  (powerTag.Init = window.powerTag.Init || []).push(function () {
-      powerAPITag.initAdInGame("pw_20583", {
-          preroll: true,
-      });
-  });    window.IS_UNITYGAME = true;
-      </script>
-  <script src="https://h5.ant.games/js/pubpower"></script>
-  <script src="https://h5.ant.games/js/in-head-tag" async></script>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -94,11 +25,11 @@
     <script>
       const hideFullScreenButton = "1";
       const buildUrl = "Build";
-      const loaderUrl = buildUrl + "/Flappy30.loader.js";
+      const loaderUrl = buildUrl + "/Flappy30 Dev.loader.js";
       const config = {
-        dataUrl: buildUrl + "/Flappy30.data",
-        frameworkUrl: buildUrl + "/Flappy30.framework.js",
-        codeUrl: buildUrl + "/Flappy30.wasm",
+        dataUrl: buildUrl + "/Flappy30 Dev.data",
+        frameworkUrl: buildUrl + "/Flappy30 Dev.framework.js",
+        codeUrl: buildUrl + "/Flappy30 Dev.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Flappy 30",

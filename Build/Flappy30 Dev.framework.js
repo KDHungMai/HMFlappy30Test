@@ -1194,29 +1194,29 @@ var tempDouble;
 var tempI64;
 
 var ASM_CONSTS = {
- 2417172: function() {
+ 3189588: function() {
   return Module.webglContextAttributes.premultipliedAlpha;
  },
- 2417233: function() {
+ 3189649: function() {
   return Module.webglContextAttributes.preserveDrawingBuffer;
  },
- 2417297: function() {
+ 3189713: function() {
   return Module.webglContextAttributes.powerPreference;
  },
- 2417355: function() {
+ 3189771: function() {
   Module["emscripten_get_now_backup"] = performance.now;
  },
- 2417410: function($0) {
+ 3189826: function($0) {
   performance.now = function() {
    return $0;
   };
  },
- 2417458: function($0) {
+ 3189874: function($0) {
   performance.now = function() {
    return $0;
   };
  },
- 2417506: function() {
+ 3189922: function() {
   performance.now = Module["emscripten_get_now_backup"];
  }
 };
@@ -14898,7 +14898,6 @@ var asmLibraryArg = {
  "glViewport": _glViewport,
  "invoke_dii": invoke_dii,
  "invoke_diii": invoke_diii,
- "invoke_ffi": invoke_ffi,
  "invoke_fi": invoke_fi,
  "invoke_fii": invoke_fii,
  "invoke_fiifi": invoke_fiifi,
@@ -14921,6 +14920,7 @@ var asmLibraryArg = {
  "invoke_iiiiiiiiiji": invoke_iiiiiiiiiji,
  "invoke_iiiiij": invoke_iiiiij,
  "invoke_iiiiijiii": invoke_iiiiijiii,
+ "invoke_iiiijii": invoke_iiiijii,
  "invoke_iiiijjii": invoke_iiiijjii,
  "invoke_iiij": invoke_iiij,
  "invoke_iiijiii": invoke_iiijiii,
@@ -14952,6 +14952,7 @@ var asmLibraryArg = {
  "invoke_vifi": invoke_vifi,
  "invoke_vifii": invoke_vifii,
  "invoke_vii": invoke_vii,
+ "invoke_viif": invoke_viif,
  "invoke_viiff": invoke_viiff,
  "invoke_viiffi": invoke_viiffi,
  "invoke_viifi": invoke_viifi,
@@ -14965,7 +14966,6 @@ var asmLibraryArg = {
  "invoke_viiiiiiiii": invoke_viiiiiiiii,
  "invoke_viiiiiiiiifi": invoke_viiiiiiiiifi,
  "invoke_viiiiiiiiii": invoke_viiiiiiiiii,
- "invoke_viiiiij": invoke_viiiiij,
  "invoke_viiij": invoke_viiij,
  "invoke_viiiji": invoke_viiiji,
  "invoke_viij": invoke_viij,
@@ -15336,25 +15336,15 @@ var dynCall_viffi = Module["dynCall_viffi"] = createExportWrapper("dynCall_viffi
 
 var dynCall_viiiiiiiijiii = Module["dynCall_viiiiiiiijiii"] = createExportWrapper("dynCall_viiiiiiiijiii");
 
-var dynCall_fiiffi = Module["dynCall_fiiffi"] = createExportWrapper("dynCall_fiiffi");
+var dynCall_vijii = Module["dynCall_vijii"] = createExportWrapper("dynCall_vijii");
 
-var dynCall_viiififii = Module["dynCall_viiififii"] = createExportWrapper("dynCall_viiififii");
+var dynCall_j = Module["dynCall_j"] = createExportWrapper("dynCall_j");
 
-var dynCall_viiiiiiiiifi = Module["dynCall_viiiiiiiiifi"] = createExportWrapper("dynCall_viiiiiiiiifi");
-
-var dynCall_fiiii = Module["dynCall_fiiii"] = createExportWrapper("dynCall_fiiii");
-
-var dynCall_jiiiiiiiiii = Module["dynCall_jiiiiiiiiii"] = createExportWrapper("dynCall_jiiiiiiiiii");
+var dynCall_jijj = Module["dynCall_jijj"] = createExportWrapper("dynCall_jijj");
 
 var dynCall_jiii = Module["dynCall_jiii"] = createExportWrapper("dynCall_jiii");
 
 var dynCall_iiji = Module["dynCall_iiji"] = createExportWrapper("dynCall_iiji");
-
-var dynCall_iiiiij = Module["dynCall_iiiiij"] = createExportWrapper("dynCall_iiiiij");
-
-var dynCall_iiiiijiii = Module["dynCall_iiiiijiii"] = createExportWrapper("dynCall_iiiiijiii");
-
-var dynCall_ijji = Module["dynCall_ijji"] = createExportWrapper("dynCall_ijji");
 
 var dynCall_iijiiii = Module["dynCall_iijiiii"] = createExportWrapper("dynCall_iijiiii");
 
@@ -15368,37 +15358,51 @@ var dynCall_iijjiiiiii = Module["dynCall_iijjiiiiii"] = createExportWrapper("dyn
 
 var dynCall_iiiijjii = Module["dynCall_iiiijjii"] = createExportWrapper("dynCall_iiiijjii");
 
-var dynCall_vijii = Module["dynCall_vijii"] = createExportWrapper("dynCall_vijii");
+var dynCall_iiiiij = Module["dynCall_iiiiij"] = createExportWrapper("dynCall_iiiiij");
 
-var dynCall_j = Module["dynCall_j"] = createExportWrapper("dynCall_j");
-
-var dynCall_jijj = Module["dynCall_jijj"] = createExportWrapper("dynCall_jijj");
+var dynCall_iiiiijiii = Module["dynCall_iiiiijiii"] = createExportWrapper("dynCall_iiiiijiii");
 
 var dynCall_iiiiiiiiiji = Module["dynCall_iiiiiiiiiji"] = createExportWrapper("dynCall_iiiiiiiiiji");
 
 var dynCall_vji = Module["dynCall_vji"] = createExportWrapper("dynCall_vji");
 
+var dynCall_diii = Module["dynCall_diii"] = createExportWrapper("dynCall_diii");
+
+var dynCall_vfiii = Module["dynCall_vfiii"] = createExportWrapper("dynCall_vfiii");
+
+var dynCall_fifi = Module["dynCall_fifi"] = createExportWrapper("dynCall_fifi");
+
+var dynCall_fiifi = Module["dynCall_fiifi"] = createExportWrapper("dynCall_fiifi");
+
+var dynCall_iiffi = Module["dynCall_iiffi"] = createExportWrapper("dynCall_iiffi");
+
+var dynCall_jijii = Module["dynCall_jijii"] = createExportWrapper("dynCall_jijii");
+
+var dynCall_viiiiiiiiifi = Module["dynCall_viiiiiiiiifi"] = createExportWrapper("dynCall_viiiiiiiiifi");
+
+var dynCall_jiiiiiiiiii = Module["dynCall_jiiiiiiiiii"] = createExportWrapper("dynCall_jiiiiiiiiii");
+
+var dynCall_ijji = Module["dynCall_ijji"] = createExportWrapper("dynCall_ijji");
+
+var dynCall_jjji = Module["dynCall_jjji"] = createExportWrapper("dynCall_jjji");
+
+var dynCall_fiiii = Module["dynCall_fiiii"] = createExportWrapper("dynCall_fiiii");
+
+var dynCall_viiiifii = Module["dynCall_viiiifii"] = createExportWrapper("dynCall_viiiifii");
+
+var dynCall_fiiffi = Module["dynCall_fiiffi"] = createExportWrapper("dynCall_fiiffi");
+
+var dynCall_viiififii = Module["dynCall_viiififii"] = createExportWrapper("dynCall_viiififii");
+
 var dynCall_viiij = Module["dynCall_viiij"] = createExportWrapper("dynCall_viiij");
 
 var dynCall_viiiifi = Module["dynCall_viiiifi"] = createExportWrapper("dynCall_viiiifi");
 
-var dynCall_viiiiij = Module["dynCall_viiiiij"] = createExportWrapper("dynCall_viiiiij");
-
-var dynCall_viiiifii = Module["dynCall_viiiifii"] = createExportWrapper("dynCall_viiiifii");
-
-var dynCall_diii = Module["dynCall_diii"] = createExportWrapper("dynCall_diii");
-
-var dynCall_jijii = Module["dynCall_jijii"] = createExportWrapper("dynCall_jijii");
-
-var dynCall_vfiii = Module["dynCall_vfiii"] = createExportWrapper("dynCall_vfiii");
-
-var dynCall_jjji = Module["dynCall_jjji"] = createExportWrapper("dynCall_jjji");
+var dynCall_iijji = Module["dynCall_iijji"] = createExportWrapper("dynCall_iijji");
 
 var dynCall_iji = Module["dynCall_iji"] = createExportWrapper("dynCall_iji");
 
 var dynCall_dii = Module["dynCall_dii"] = createExportWrapper("dynCall_dii");
-
-var dynCall_iijji = Module["dynCall_iijji"] = createExportWrapper("dynCall_iijji");
 
 var dynCall_viijiiiiii = Module["dynCall_viijiiiiii"] = createExportWrapper("dynCall_viijiiiiii");
 
@@ -15412,9 +15416,11 @@ var dynCall_viiiji = Module["dynCall_viiiji"] = createExportWrapper("dynCall_vii
 
 var dynCall_jiiiii = Module["dynCall_jiiiii"] = createExportWrapper("dynCall_jiiiii");
 
+var dynCall_iiiiiiiiiiiiii = Module["dynCall_iiiiiiiiiiiiii"] = createExportWrapper("dynCall_iiiiiiiiiiiiii");
+
 var dynCall_ffi = Module["dynCall_ffi"] = createExportWrapper("dynCall_ffi");
 
-var dynCall_iiiiiiiiiiiiii = Module["dynCall_iiiiiiiiiiiiii"] = createExportWrapper("dynCall_iiiiiiiiiiiiii");
+var dynCall_fffi = Module["dynCall_fffi"] = createExportWrapper("dynCall_fffi");
 
 var dynCall_vdi = Module["dynCall_vdi"] = createExportWrapper("dynCall_vdi");
 
@@ -15424,13 +15430,7 @@ var dynCall_viidii = Module["dynCall_viidii"] = createExportWrapper("dynCall_vii
 
 var dynCall_ifffi = Module["dynCall_ifffi"] = createExportWrapper("dynCall_ifffi");
 
-var dynCall_fiifi = Module["dynCall_fiifi"] = createExportWrapper("dynCall_fiifi");
-
-var dynCall_fifi = Module["dynCall_fifi"] = createExportWrapper("dynCall_fifi");
-
 var dynCall_fiiifi = Module["dynCall_fiiifi"] = createExportWrapper("dynCall_fiiifi");
-
-var dynCall_fffi = Module["dynCall_fffi"] = createExportWrapper("dynCall_fffi");
 
 var dynCall_ffffi = Module["dynCall_ffffi"] = createExportWrapper("dynCall_ffffi");
 
@@ -15780,9 +15780,19 @@ var dynCall_vijjji = Module["dynCall_vijjji"] = createExportWrapper("dynCall_vij
 
 var dynCall_jiiiiiiiii = Module["dynCall_jiiiiiiiii"] = createExportWrapper("dynCall_jiiiiiiiii");
 
-var dynCall_iiijjii = Module["dynCall_iiijjii"] = createExportWrapper("dynCall_iiijjii");
+var dynCall_iiiiijii = Module["dynCall_iiiiijii"] = createExportWrapper("dynCall_iiiiijii");
 
-var dynCall_iiffi = Module["dynCall_iiffi"] = createExportWrapper("dynCall_iiffi");
+var dynCall_iiiiffiiiji = Module["dynCall_iiiiffiiiji"] = createExportWrapper("dynCall_iiiiffiiiji");
+
+var dynCall_viidi = Module["dynCall_viidi"] = createExportWrapper("dynCall_viidi");
+
+var dynCall_iiiiffiiiii = Module["dynCall_iiiiffiiiii"] = createExportWrapper("dynCall_iiiiffiiiii");
+
+var dynCall_jiiiiji = Module["dynCall_jiiiiji"] = createExportWrapper("dynCall_jiiiiji");
+
+var dynCall_fiiiifi = Module["dynCall_fiiiifi"] = createExportWrapper("dynCall_fiiiifi");
+
+var dynCall_iiijjii = Module["dynCall_iiijjii"] = createExportWrapper("dynCall_iiijjii");
 
 function invoke_ii(index, a1) {
  var sp = stackSave();
@@ -16037,10 +16047,43 @@ function invoke_iiiiiiiiii(index, a1, a2, a3, a4, a5, a6, a7, a8, a9) {
  }
 }
 
-function invoke_viiiiiiii(index, a1, a2, a3, a4, a5, a6, a7, a8) {
+function invoke_viif(index, a1, a2, a3) {
  var sp = stackSave();
  try {
-  dynCall_viiiiiiii(index, a1, a2, a3, a4, a5, a6, a7, a8);
+  dynCall_viif(index, a1, a2, a3);
+ } catch (e) {
+  stackRestore(sp);
+  if (e !== e + 0 && e !== "longjmp") throw e;
+  _setThrew(1, 0);
+ }
+}
+
+function invoke_iiiiiiiii(index, a1, a2, a3, a4, a5, a6, a7, a8) {
+ var sp = stackSave();
+ try {
+  return dynCall_iiiiiiiii(index, a1, a2, a3, a4, a5, a6, a7, a8);
+ } catch (e) {
+  stackRestore(sp);
+  if (e !== e + 0 && e !== "longjmp") throw e;
+  _setThrew(1, 0);
+ }
+}
+
+function invoke_fii(index, a1, a2) {
+ var sp = stackSave();
+ try {
+  return dynCall_fii(index, a1, a2);
+ } catch (e) {
+  stackRestore(sp);
+  if (e !== e + 0 && e !== "longjmp") throw e;
+  _setThrew(1, 0);
+ }
+}
+
+function invoke_viifi(index, a1, a2, a3, a4) {
+ var sp = stackSave();
+ try {
+  dynCall_viifi(index, a1, a2, a3, a4);
  } catch (e) {
   stackRestore(sp);
   if (e !== e + 0 && e !== "longjmp") throw e;
@@ -16059,10 +16102,32 @@ function invoke_viiff(index, a1, a2, a3, a4) {
  }
 }
 
-function invoke_fii(index, a1, a2) {
+function invoke_viiiiiiii(index, a1, a2, a3, a4, a5, a6, a7, a8) {
  var sp = stackSave();
  try {
-  return dynCall_fii(index, a1, a2);
+  dynCall_viiiiiiii(index, a1, a2, a3, a4, a5, a6, a7, a8);
+ } catch (e) {
+  stackRestore(sp);
+  if (e !== e + 0 && e !== "longjmp") throw e;
+  _setThrew(1, 0);
+ }
+}
+
+function invoke_vfiii(index, a1, a2, a3, a4) {
+ var sp = stackSave();
+ try {
+  dynCall_vfiii(index, a1, a2, a3, a4);
+ } catch (e) {
+  stackRestore(sp);
+  if (e !== e + 0 && e !== "longjmp") throw e;
+  _setThrew(1, 0);
+ }
+}
+
+function invoke_viiffi(index, a1, a2, a3, a4, a5) {
+ var sp = stackSave();
+ try {
+  dynCall_viiffi(index, a1, a2, a3, a4, a5);
  } catch (e) {
   stackRestore(sp);
   if (e !== e + 0 && e !== "longjmp") throw e;
@@ -16092,6 +16157,39 @@ function invoke_vifi(index, a1, a2, a3) {
  }
 }
 
+function invoke_fiiii(index, a1, a2, a3, a4) {
+ var sp = stackSave();
+ try {
+  return dynCall_fiiii(index, a1, a2, a3, a4);
+ } catch (e) {
+  stackRestore(sp);
+  if (e !== e + 0 && e !== "longjmp") throw e;
+  _setThrew(1, 0);
+ }
+}
+
+function invoke_viiiifi(index, a1, a2, a3, a4, a5, a6) {
+ var sp = stackSave();
+ try {
+  dynCall_viiiifi(index, a1, a2, a3, a4, a5, a6);
+ } catch (e) {
+  stackRestore(sp);
+  if (e !== e + 0 && e !== "longjmp") throw e;
+  _setThrew(1, 0);
+ }
+}
+
+function invoke_vifii(index, a1, a2, a3, a4) {
+ var sp = stackSave();
+ try {
+  dynCall_vifii(index, a1, a2, a3, a4);
+ } catch (e) {
+  stackRestore(sp);
+  if (e !== e + 0 && e !== "longjmp") throw e;
+  _setThrew(1, 0);
+ }
+}
+
 function invoke_fi(index, a1) {
  var sp = stackSave();
  try {
@@ -16114,83 +16212,6 @@ function invoke_iiifi(index, a1, a2, a3, a4) {
  }
 }
 
-function invoke_fiiii(index, a1, a2, a3, a4) {
- var sp = stackSave();
- try {
-  return dynCall_fiiii(index, a1, a2, a3, a4);
- } catch (e) {
-  stackRestore(sp);
-  if (e !== e + 0 && e !== "longjmp") throw e;
-  _setThrew(1, 0);
- }
-}
-
-function invoke_iiiiiiiii(index, a1, a2, a3, a4, a5, a6, a7, a8) {
- var sp = stackSave();
- try {
-  return dynCall_iiiiiiiii(index, a1, a2, a3, a4, a5, a6, a7, a8);
- } catch (e) {
-  stackRestore(sp);
-  if (e !== e + 0 && e !== "longjmp") throw e;
-  _setThrew(1, 0);
- }
-}
-
-function invoke_viifi(index, a1, a2, a3, a4) {
- var sp = stackSave();
- try {
-  dynCall_viifi(index, a1, a2, a3, a4);
- } catch (e) {
-  stackRestore(sp);
-  if (e !== e + 0 && e !== "longjmp") throw e;
-  _setThrew(1, 0);
- }
-}
-
-function invoke_viiiifi(index, a1, a2, a3, a4, a5, a6) {
- var sp = stackSave();
- try {
-  dynCall_viiiifi(index, a1, a2, a3, a4, a5, a6);
- } catch (e) {
-  stackRestore(sp);
-  if (e !== e + 0 && e !== "longjmp") throw e;
-  _setThrew(1, 0);
- }
-}
-
-function invoke_viiffi(index, a1, a2, a3, a4, a5) {
- var sp = stackSave();
- try {
-  dynCall_viiffi(index, a1, a2, a3, a4, a5);
- } catch (e) {
-  stackRestore(sp);
-  if (e !== e + 0 && e !== "longjmp") throw e;
-  _setThrew(1, 0);
- }
-}
-
-function invoke_vfiii(index, a1, a2, a3, a4) {
- var sp = stackSave();
- try {
-  dynCall_vfiii(index, a1, a2, a3, a4);
- } catch (e) {
-  stackRestore(sp);
-  if (e !== e + 0 && e !== "longjmp") throw e;
-  _setThrew(1, 0);
- }
-}
-
-function invoke_vifii(index, a1, a2, a3, a4) {
- var sp = stackSave();
- try {
-  dynCall_vifii(index, a1, a2, a3, a4);
- } catch (e) {
-  stackRestore(sp);
-  if (e !== e + 0 && e !== "longjmp") throw e;
-  _setThrew(1, 0);
- }
-}
-
 function invoke_dii(index, a1, a2) {
  var sp = stackSave();
  try {
@@ -16206,17 +16227,6 @@ function invoke_iifi(index, a1, a2, a3) {
  var sp = stackSave();
  try {
   return dynCall_iifi(index, a1, a2, a3);
- } catch (e) {
-  stackRestore(sp);
-  if (e !== e + 0 && e !== "longjmp") throw e;
-  _setThrew(1, 0);
- }
-}
-
-function invoke_ffi(index, a1, a2) {
- var sp = stackSave();
- try {
-  return dynCall_ffi(index, a1, a2);
  } catch (e) {
   stackRestore(sp);
   if (e !== e + 0 && e !== "longjmp") throw e;
@@ -16334,10 +16344,10 @@ function invoke_iiiiij(index, a1, a2, a3, a4, a5, a6) {
  }
 }
 
-function invoke_viiij(index, a1, a2, a3, a4, a5) {
+function invoke_vijii(index, a1, a2, a3, a4, a5) {
  var sp = stackSave();
  try {
-  dynCall_viiij(index, a1, a2, a3, a4, a5);
+  dynCall_vijii(index, a1, a2, a3, a4, a5);
  } catch (e) {
   stackRestore(sp);
   if (e !== e + 0 && e !== "longjmp") throw e;
@@ -16345,21 +16355,10 @@ function invoke_viiij(index, a1, a2, a3, a4, a5) {
  }
 }
 
-function invoke_jiiiiiiiiii(index, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10) {
+function invoke_jijj(index, a1, a2, a3, a4, a5) {
  var sp = stackSave();
  try {
-  return dynCall_jiiiiiiiiii(index, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10);
- } catch (e) {
-  stackRestore(sp);
-  if (e !== e + 0 && e !== "longjmp") throw e;
-  _setThrew(1, 0);
- }
-}
-
-function invoke_ijji(index, a1, a2, a3, a4, a5) {
- var sp = stackSave();
- try {
-  return dynCall_ijji(index, a1, a2, a3, a4, a5);
+  return dynCall_jijj(index, a1, a2, a3, a4, a5);
  } catch (e) {
   stackRestore(sp);
   if (e !== e + 0 && e !== "longjmp") throw e;
@@ -16378,10 +16377,10 @@ function invoke_jiii(index, a1, a2, a3) {
  }
 }
 
-function invoke_iiji(index, a1, a2, a3, a4) {
+function invoke_viiji(index, a1, a2, a3, a4, a5) {
  var sp = stackSave();
  try {
-  return dynCall_iiji(index, a1, a2, a3, a4);
+  dynCall_viiji(index, a1, a2, a3, a4, a5);
  } catch (e) {
   stackRestore(sp);
   if (e !== e + 0 && e !== "longjmp") throw e;
@@ -16389,10 +16388,10 @@ function invoke_iiji(index, a1, a2, a3, a4) {
  }
 }
 
-function invoke_iiiiijiii(index, a1, a2, a3, a4, a5, a6, a7, a8, a9) {
+function invoke_iiji(index, a1, a2, a3, a4) {
  var sp = stackSave();
  try {
-  return dynCall_iiiiijiii(index, a1, a2, a3, a4, a5, a6, a7, a8, a9);
+  return dynCall_iiji(index, a1, a2, a3, a4);
  } catch (e) {
   stackRestore(sp);
   if (e !== e + 0 && e !== "longjmp") throw e;
@@ -16415,17 +16414,6 @@ function invoke_iiiijjii(index, a1, a2, a3, a4, a5, a6, a7, a8, a9) {
  var sp = stackSave();
  try {
   return dynCall_iiiijjii(index, a1, a2, a3, a4, a5, a6, a7, a8, a9);
- } catch (e) {
-  stackRestore(sp);
-  if (e !== e + 0 && e !== "longjmp") throw e;
-  _setThrew(1, 0);
- }
-}
-
-function invoke_vijii(index, a1, a2, a3, a4, a5) {
- var sp = stackSave();
- try {
-  dynCall_vijii(index, a1, a2, a3, a4, a5);
  } catch (e) {
   stackRestore(sp);
   if (e !== e + 0 && e !== "longjmp") throw e;
@@ -16466,10 +16454,10 @@ function invoke_iijiiiiii(index, a1, a2, a3, a4, a5, a6, a7, a8, a9) {
  }
 }
 
-function invoke_jijj(index, a1, a2, a3, a4, a5) {
+function invoke_iiiiijiii(index, a1, a2, a3, a4, a5, a6, a7, a8, a9) {
  var sp = stackSave();
  try {
-  return dynCall_jijj(index, a1, a2, a3, a4, a5);
+  return dynCall_iiiiijiii(index, a1, a2, a3, a4, a5, a6, a7, a8, a9);
  } catch (e) {
   stackRestore(sp);
   if (e !== e + 0 && e !== "longjmp") throw e;
@@ -16499,10 +16487,10 @@ function invoke_vji(index, a1, a2, a3) {
  }
 }
 
-function invoke_viiiiij(index, a1, a2, a3, a4, a5, a6, a7) {
+function invoke_viiiji(index, a1, a2, a3, a4, a5, a6) {
  var sp = stackSave();
  try {
-  dynCall_viiiiij(index, a1, a2, a3, a4, a5, a6, a7);
+  dynCall_viiiji(index, a1, a2, a3, a4, a5, a6);
  } catch (e) {
   stackRestore(sp);
   if (e !== e + 0 && e !== "longjmp") throw e;
@@ -16521,10 +16509,43 @@ function invoke_jijii(index, a1, a2, a3, a4, a5) {
  }
 }
 
+function invoke_jiiiiiiiiii(index, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10) {
+ var sp = stackSave();
+ try {
+  return dynCall_jiiiiiiiiii(index, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10);
+ } catch (e) {
+  stackRestore(sp);
+  if (e !== e + 0 && e !== "longjmp") throw e;
+  _setThrew(1, 0);
+ }
+}
+
+function invoke_ijji(index, a1, a2, a3, a4, a5) {
+ var sp = stackSave();
+ try {
+  return dynCall_ijji(index, a1, a2, a3, a4, a5);
+ } catch (e) {
+  stackRestore(sp);
+  if (e !== e + 0 && e !== "longjmp") throw e;
+  _setThrew(1, 0);
+ }
+}
+
 function invoke_jjji(index, a1, a2, a3, a4, a5) {
  var sp = stackSave();
  try {
   return dynCall_jjji(index, a1, a2, a3, a4, a5);
+ } catch (e) {
+  stackRestore(sp);
+  if (e !== e + 0 && e !== "longjmp") throw e;
+  _setThrew(1, 0);
+ }
+}
+
+function invoke_viiij(index, a1, a2, a3, a4, a5) {
+ var sp = stackSave();
+ try {
+  dynCall_viiij(index, a1, a2, a3, a4, a5);
  } catch (e) {
   stackRestore(sp);
   if (e !== e + 0 && e !== "longjmp") throw e;
@@ -16653,32 +16674,21 @@ function invoke_viji(index, a1, a2, a3, a4) {
  }
 }
 
-function invoke_viiji(index, a1, a2, a3, a4, a5) {
- var sp = stackSave();
- try {
-  dynCall_viiji(index, a1, a2, a3, a4, a5);
- } catch (e) {
-  stackRestore(sp);
-  if (e !== e + 0 && e !== "longjmp") throw e;
-  _setThrew(1, 0);
- }
-}
-
-function invoke_viiiji(index, a1, a2, a3, a4, a5, a6) {
- var sp = stackSave();
- try {
-  dynCall_viiiji(index, a1, a2, a3, a4, a5, a6);
- } catch (e) {
-  stackRestore(sp);
-  if (e !== e + 0 && e !== "longjmp") throw e;
-  _setThrew(1, 0);
- }
-}
-
 function invoke_jiiiii(index, a1, a2, a3, a4, a5) {
  var sp = stackSave();
  try {
   return dynCall_jiiiii(index, a1, a2, a3, a4, a5);
+ } catch (e) {
+  stackRestore(sp);
+  if (e !== e + 0 && e !== "longjmp") throw e;
+  _setThrew(1, 0);
+ }
+}
+
+function invoke_iiiijii(index, a1, a2, a3, a4, a5, a6, a7) {
+ var sp = stackSave();
+ try {
+  return dynCall_iiiijii(index, a1, a2, a3, a4, a5, a6, a7);
  } catch (e) {
   stackRestore(sp);
   if (e !== e + 0 && e !== "longjmp") throw e;
